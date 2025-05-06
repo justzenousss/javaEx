@@ -1,0 +1,91 @@
+package BT;
+
+import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JFrame;
+import javax.swing.AbstractButton;
+import javax.swing.JButton;
+import javax.swing.JTextField;
+import javax.swing.JTextArea;
+
+public class dasdasd {
+
+	private JFrame frame;
+	private JTextField txtHTn;
+	private JTextField txtMSv;
+	private JTextArea textArea_1;
+	
+	
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					dasdasd window = new dasdasd();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+		
+		
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public dasdasd() {
+		initialize();
+	}
+	
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 450, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		JButton btnNewButton = new JButton("Bấm đê");
+		btnNewButton.setBounds(160, 180, 85, 21);
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				String name = nameField.getText();
+                
+				String id = idField.getText();
+                
+				resultArea.setText("Họ và tên: " + name + "\nMã sinh viên: " + id);
+			}
+		});
+		frame.getContentPane().setLayout(null);
+		frame.getContentPane().add(btnNewButton);
+		
+		txtHTn = new JTextField();
+		txtHTn.setBounds(57, 75, 96, 19);
+		txtHTn.setText("Họ Tên");
+		frame.getContentPane().add(txtHTn);
+		txtHTn.setColumns(10);
+		
+		JTextArea textArea = new JTextArea();
+		textArea.setBounds(198, 72, 130, 22);
+		frame.getContentPane().add(textArea);
+		
+		txtMSv = new JTextField();
+		txtMSv.setBounds(57, 110, 96, 19);
+		txtMSv.setText("Mã SV");
+		txtMSv.setColumns(10);
+		frame.getContentPane().add(txtMSv);
+		
+		textArea_1 = new JTextArea();
+		textArea_1.setBounds(198, 107, 130, 22);
+		frame.getContentPane().add(textArea_1);
+	}
+
+}

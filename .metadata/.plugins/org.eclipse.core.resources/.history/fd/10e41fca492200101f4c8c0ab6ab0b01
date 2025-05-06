@@ -1,0 +1,62 @@
+package BT;
+
+import java.awt.Color;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JCheckBox;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JCheckBox;
+public class dasdas extends JFrame {
+
+	private static final long serialVersionUID = 1L;
+	private JPanel contentPane;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					dasdas frame = new dasdas();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public dasdas() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JCheckBox chckbxNewCheckBox = new JCheckBox("New check box");
+		
+		chckbxNewCheckBox.addActionListener(e -> {
+            if (chckbxNewCheckBox.isSelected()) {
+                contentPane.setBackground(Color.PINK); // Nền xanh
+            } else {
+                contentPane.setBackground(null); // Trở về mặc định
+            }
+        });
+		
+		chckbxNewCheckBox.setBounds(162, 102, 93, 21);
+		contentPane.add(chckbxNewCheckBox);
+	}
+
+}
