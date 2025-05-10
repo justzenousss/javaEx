@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+                             http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <!-- Listener -->
+    <listener>
+        <listener-class>com.example.TEST3</listener-class>
+    </listener>
+
+    <!-- Servlet -->
+    <servlet>
+        <servlet-name>TEST</servlet-name>
+        <servlet-class>com.example.TEST</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TEST</servlet-name>
+        <url-pattern>/TEST</url-pattern>
+    </servlet-mapping>
+
+    <!-- Filter -->
+    <filter>
+        <filter-name>TEST2</filter-name>
+        <filter-class>com.example.TEST2</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>TEST2</filter-name>
+        <url-pattern>/TEST2</url-pattern>
+    </filter-mapping>
+
+</web-app>
