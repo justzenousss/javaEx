@@ -22,10 +22,10 @@ public class SessionFilter implements Filter {
             throws IOException, ServletException {
         HttpServletRequest httpReq = (HttpServletRequest) request;
         HttpSession session = httpReq.getSession(true); // tạo nếu chưa có
-        chain.doFilter(request, response);
+        chain.doFilter(request, response); //tiếp tục xử lí request
     }
 
-    public void init(FilterConfig filterConfig) {}
-    public void destroy() {}
+    public void init(FilterConfig filterConfig) {} //gọi mở
+    public void destroy() {} // gọi tắt
 }
 
