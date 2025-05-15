@@ -17,3 +17,5 @@ C:\Users\Admin\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jsp
 \demweb\src\main\java
 C:\Users\Admin\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1939862120.index
 \ptbac2\src\main\java
+C:\Users\Admin\eclipse-workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2575244620.index
+\thuchanh1_chuong4\src\main\java

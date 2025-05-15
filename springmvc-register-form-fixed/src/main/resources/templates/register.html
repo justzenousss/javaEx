@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Đăng ký</title></head>
+<body>
+<h2>Form Đăng Ký</h2>
+<form th:action="@{/register}" method="post" th:object="${user}">
+    Họ tên: <input type="text" th:field="*{name}" /><br/>
+    Email: <input type="email" th:field="*{email}" /><br/>
+    Mật khẩu: <input type="password" th:field="*{password}" /><br/>
+    <button type="submit">Gửi</button>
+</form>
+</body>
+</html>
